@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Gallery | Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fafafa;
+      color: #222;
+    }
+    header {
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #555;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #000;
+    }
+    .hero {
+      background: url('https://picsum.photos/1600/900?grayscale') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      transition: all 0.5s;
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      text-align: center;
+    }
+    section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 50px;
+      display: none; /* start hidden for preview */
+    }
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Gallery</h1>
+    <nav>
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('gallery')">Gallery</a>
+    </nav>
+  </header>
+
+  <!-- Home Page -->
+  <div id="home">
+    <div class="hero">
+      <h2>Welcome to My Gallery</h2>
+    </div>
+    <section>
+      <h3>Timeless Luxury in Every Frame</h3>
+      <p>Explore a curated selection of elegant photography that captures beauty, detail, and emotion.</p>
+    </section>
+  </div>
+
+  <!-- Gallery Page -->
+  <div id="gallery" class="gallery">
+    <img src="https://picsum.photos/600/800?1" alt="Photo 1">
+    <img src="https://picsum.photos/600/800?2" alt="Photo 2">
+    <img src="https://picsum.photos/600/800?3" alt="Photo 3">
+    <img src="https://picsum.photos/600/800?4" alt="Photo 4">
+    <img src="https://picsum.photos/600/800?5" alt="Photo 5">
+    <img src="https://picsum.photos/600/800?6" alt="Photo 6">
+  </div>
+
+  <footer>
+    © 2025 My Gallery. All rights reserved.
+  </footer>
+
+  <script>
+    function showPage(page) {
+      if(page === 'home') {
+        document.getElementById('home').style.display = 'block';
+        document.getElementById('gallery').style.display = 'none';
+      } else if(page === 'gallery') {
+        document.getElementById('home').style.display = 'none';
+        document.getElementById('gallery').style.display = 'grid';
+      }
+    }
+  </script>
+
+</body>
+</html>
