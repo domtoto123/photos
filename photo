@@ -1,0 +1,86 @@
+<!-- File: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Gallery | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fafafa;
+      color: #222;
+    }
+    header {
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #555;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #000;
+    }
+    .hero {
+      background: url('https://picsum.photos/1600/900?grayscale') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+    }
+    section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Gallery</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Welcome to My Gallery</h2>
+  </div>
+
+  <section>
+    <h3>Timeless Luxury in Every Frame</h3>
+    <p>Explore a curated selection of elegant photography that captures beauty, detail, and emotion.</p>
+  </section>
+
+  <footer>
+    © 2025 My Gallery. All rights reserved.
+  </footer>
+</body>
+</html>
